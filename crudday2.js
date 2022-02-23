@@ -30,47 +30,42 @@
 
 
 // [...]
-// foods:[{id:number,name:string, price:number},...]
+// foods:[{id:number,name:string, price:number},...]  //passing a newobj
 
 // food: {id:number,name:string, price:number}
 
 /// returns new array with food add
 
-let foods = [{id:1, name:'carnitas', price:21},{id:2, name:'asada',price:22}]
+/* let foods = [{id:1, name:'carnitas', price:21},{id:2, name:'asada',price:22}]
 let newFoodToAdd = {id: 3, name: 'sopapilla' , price:6}
-
-
 
 const addFood1=(newFood)=>{
 
 let newMenu = [...foods, newFood];
 return newMenu
-
 }
-
-
-
 console.log('original menu: ' , foods)
-console.log('updated menu: ', addFood1(newFoodToAdd)) 
+console.log('updated menu: ', addFood1(newFoodToAdd))  */
 
 
 // [...]
 
-// foods:[{id:number,name:string, price:number},...]
-
+// foods:[{id:number,name:string, price:number},...]  //passing it value, and formatting it into an obj to be added into the array 
+//make the obj within the function
 // id:number,
 
 // name:string, 
 
-// price:number}
+// price:number
 
 /// returns new array with food add
+let foods = [{id:1, name:'carnitas', price:21},{id:2, name:'asada',price:22}]
 
-//const addFood2 = (foods, id,name,price)=>{
-
-//}
-
-
+const addFood2 = (foods, id,name,price)=>{
+return [...foods, {id, name, price} ]
+}
+console.log(addFood2(foods, 3, 'sopapilla', 6)) 
+//pass in an object and (id number, name and price)
 
 
 //MAP
