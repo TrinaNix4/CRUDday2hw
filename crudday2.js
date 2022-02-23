@@ -2,10 +2,10 @@
 
 // TEST DATA - 2 arrays of objects with keys: unique id; name of food, and price of food  
 
-let mexican = [{id:1, name:'carnitas', price:21},{id:2, name:'asada',price:22}]
+//let mexican = [{id:1, name:'carnitas', price:21},{id:2, name:'asada',price:22}]
 
 
-let american = [{id:1, name:'burgers', price:21},{id:2, name:'pizza rolls',price:22}]
+//let american = [{id:1, name:'burgers', price:21},{id:2, name:'pizza rolls',price:22}]
 
 
 
@@ -16,13 +16,13 @@ let american = [{id:1, name:'burgers', price:21},{id:2, name:'pizza rolls',price
 /// returns array of formatted strings[] (you choose what these look like)
 //array is populated with the results of calling a function on every element in the array
 
-const filterMenu = mexican.map((obj, index) => {
- if(index > 4){   //still returns an array, but array has 'undefined' for values 
-   return obj; }
+//const filterMenu = mexican.map((obj, index) => {
+ //if(index > 4){   //still returns an array, but array has 'undefined' for values 
+ //  return obj; }
 
-})
+//})
 
-console.log(filterMenu)
+//console.log(filterMenu)
   
 
 
@@ -36,10 +36,22 @@ console.log(filterMenu)
 
 /// returns new array with food add
 
-//const addFood1=(foods, food)=>{
+let foods = [{id:1, name:'carnitas', price:21},{id:2, name:'asada',price:22}]
+let newFoodToAdd = {id: 3, name: 'sopapilla' , price:6}
 
-//}
 
+
+const addFood1=(newFood)=>{
+
+let newMenu = [...foods, newFood];
+return newMenu
+
+}
+
+
+
+console.log('original menu: ' , foods)
+console.log('updated menu: ', addFood1(newFoodToAdd)) 
 
 
 // [...]
