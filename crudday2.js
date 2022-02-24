@@ -2,10 +2,10 @@
 
 // TEST DATA - 2 arrays of objects with keys: unique id; name of food, and price of food  
 
-//let mexican = [{id:1, name:'carnitas', price:21},{id:2, name:'asada',price:22}]
+let mexican = [{id:1, name:'carnitas', price:21},{id:2, name:'asada',price:22}]
 
 
-//let american = [{id:1, name:'burgers', price:21},{id:2, name:'pizza rolls',price:22}]
+let american = [{id:1, name:'burgers', price:21},{id:2, name:'pizza rolls',price:22}]
 
 
 
@@ -16,13 +16,16 @@
 /// returns array of formatted strings[] (you choose what these look like)
 //array is populated with the results of calling a function on every element in the array
 
-//const filterMenu = mexican.map((obj, index) => {
- //if(index > 4){   //still returns an array, but array has 'undefined' for values 
- //  return obj; }
+/* const about = (foods)=>{
+let mapArray = mexican.map((foods) => {
+return 
 
-//})
+})
+ return 
 
-//console.log(filterMenu)
+
+
+} */
   
 
 
@@ -36,7 +39,7 @@
 
 /// returns new array with food add
 
-/* let foods = [{id:1, name:'carnitas', price:21},{id:2, name:'asada',price:22}]
+ /* let foods = [{id:1, name:'carnitas', price:21},{id:2, name:'asada',price:22}]
 let newFoodToAdd = {id: 3, name: 'sopapilla' , price:6}
 
 const addFood1=(newFood)=>{
@@ -45,7 +48,7 @@ let newMenu = [...foods, newFood];
 return newMenu
 }
 console.log('original menu: ' , foods)
-console.log('updated menu: ', addFood1(newFoodToAdd))  */
+console.log('updated menu: ', addFood1(newFoodToAdd))   */
 
 
 // [...]
@@ -59,12 +62,14 @@ console.log('updated menu: ', addFood1(newFoodToAdd))  */
 // price:number
 
 /// returns new array with food add
-let foods = [{id:1, name:'carnitas', price:21},{id:2, name:'asada',price:22}]
+
+
+/* let foods = [{id:1, name:'carnitas', price:21},{id:2, name:'asada',price:22}]
 
 const addFood2 = (foods, id,name,price)=>{
 return [...foods, {id, name, price} ]
 }
-console.log(addFood2(foods, 3, 'sopapilla', 6)) 
+console.log(addFood2(foods, 3, 'sopapilla', 6))   */
 //pass in an object and (id number, name and price)
 
 
@@ -74,15 +79,24 @@ console.log(addFood2(foods, 3, 'sopapilla', 6))
 
 // id:number,
 
-// price:number}
+// price:number
 
 /// returns new array with the price updated with the id given
 
-//const updateFood1=(foods, id, price)=>{
+  let foods = [{id:1, name:'carnitas', price:21},{id:2, name:'asada',price:22}]
 
- // Update - Map
+const updateFood1=(foods, id, price)=>{
 
-//}
+ 
+ return foods.map((foods) =>{
+return foods
+
+ })
+}
+console.log(mexican, 1, 6) 
+
+
+
 
 
 
@@ -96,12 +110,15 @@ console.log(addFood2(foods, 3, 'sopapilla', 6))
 
 /// returns new array with the food item updated with the id given
 
-//const updateFood1=(foods, id, food)=>{
+const updateFood1=(foods, id, food)=>{
 
-
-
- //}
-
+let newArray = foods.map((foods)=> {
+return 
+return foods
+})
+console.log(newArray)
+ }
+console.log(updateFood1(mexican, 1, taco))
 
 
 // FILTER
@@ -112,12 +129,16 @@ console.log(addFood2(foods, 3, 'sopapilla', 6))
 
 // removes the food with the given the id
 
-//const deleteFood1 = (foods,id)=>{
+//if it returns true, its gonna keep the thing. if not true it will delete it
 
-
-
-
-//}
+//delete food with id: 1
+/*  const deleteFood1 = (foods,id)=>{
+let foodFilter = foods.filter((foods) => {
+    return foods.id !== id 
+})
+return foodFilter
+}
+console.log(deleteFood1(mexican, 1))  */
 
 
 
@@ -129,8 +150,13 @@ console.log(addFood2(foods, 3, 'sopapilla', 6))
 
 // removes the food with price over price given
 
-//const deleteFood2 = (foods,price)=>{
+/*  const deleteFood2 = (foods,price)=>{
+let foodFilter2 = foods.filter((foods) => {
+return foods.price > price
 
+})
+return foodFilter2
+}
+console.log(deleteFood2(mexican, 21)) 
+ */
 
-
-//}
