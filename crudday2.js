@@ -16,15 +16,13 @@ let american = [{id:1, name:'burgers', price:21},{id:2, name:'pizza rolls',price
 /// returns array of formatted strings[] (you choose what these look like)
 //array is populated with the results of calling a function on every element in the array
 
- const about = (foods)=>{
-let mapArray = foods.map((foods => {
-return [`{id: ${foods.id}, name: ${foods.name}, price: ${foods.price}}`]
+ const about = mexican.map(foods => `${foods.id} ${foods.name} ${foods.price}`)
+ 
+console.log(about) 
+console.log(typeof about)
 
-}))
-console.log(mexican)
-console.log(about(mexican))
 
-} 
+
   
 
 
