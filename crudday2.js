@@ -5,8 +5,7 @@
 let mexican = [{id:1, name:'carnitas', price:21},{id:2, name:'asada',price:22}]
 
 
-let american = [{id:1, name:'burgers', price:21},{id:2, name:'pizza rolls',price:22}]
-
+let american = [{id:1, name:'burgers', price:21},{id:2, name:'pizza rolls',price:22}] 
 
 
 //MAP
@@ -16,17 +15,11 @@ let american = [{id:1, name:'burgers', price:21},{id:2, name:'pizza rolls',price
 /// returns array of formatted strings[] (you choose what these look like)
 //array is populated with the results of calling a function on every element in the array
 
- const about = mexican.map(foods => `${foods.id} ${foods.name} ${foods.price}`)
+ /* const about = mexican.map(foods => `${foods.id} ${foods.name} ${foods.price}`)
  
 console.log(about) 
-console.log(typeof about)
+console.log(typeof about) */
 
-
-
-  
-
-
- 
 
 
 // [...]
@@ -80,21 +73,18 @@ console.log(addFood2(foods, 3, 'sopapilla', 6))   */
 
 /// returns new array with the price updated with the id given
 
-  /* let foods = [{id:1, name:'carnitas', price:21},{id:2, name:'asada',price:22}]
+  //let foods = [{id:1, name:'carnitas', price:21},{id:2, name:'asada',price:22}]
 
 const updateFood1=(foods, id, price)=>{
+let newArr = foods.map(foods => {
+  if(foods.id === id){
+    return {...foods, price: foods.price};
+  }
+return foods;
 
- 
- return foods.map((foods) =>{
-return foods
-
- })
+ });
 }
-console.log(mexican, 1, 6)  */
-
-
-
-
+console.log(updateFood1(mexican, 1, 6))  
 
 
 //MAP
@@ -154,6 +144,4 @@ return foods.price > price
 })
 return foodFilter2
 }
-console.log(deleteFood2(mexican, 21)) 
- */
-
+console.log(deleteFood2(mexican, 21)) } */
