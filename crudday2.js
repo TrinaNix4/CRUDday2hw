@@ -75,7 +75,7 @@ console.log(addFood2(foods, 3, 'sopapilla', 6))   */
 
   //let foods = [{id:1, name:'carnitas', price:21},{id:2, name:'asada',price:22}]
 
-const updateFood1=(foods, id, price)=>{
+/* const updateFood1=(foods, id, price)=>{
 let newArr = foods.map(foods => {
   if(foods.id === id){
     return foods.price = price; 
@@ -87,7 +87,7 @@ let newArr = foods.map(foods => {
 
 }
 
-console.log(updateFood1(mexican, 2, 6))  
+console.log(updateFood1(mexican, 2, 6))   */
 
 
 
@@ -101,15 +101,18 @@ console.log(updateFood1(mexican, 2, 6))
 
 /// returns new array with the food item updated with the id given
 
-/* const updateFood1=(foods, id, food)=>{
+const updateFood2=(foods, id, food)=>{
+let newArr = foods.map(foods => {
+  if(foods.id === id){
+     return foods.food = food
 
-let newArray = foods.map((foods)=> {
-return 
-return foods
-})
-console.log(newArray)
- }
-console.log(updateFood1(mexican, 1, taco)) */
+  }
+ })
+    return newArr
+
+}
+
+console.log(updateFood2(mexican, 2, 'taco'))  
 
 
 // FILTER
