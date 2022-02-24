@@ -78,13 +78,17 @@ console.log(addFood2(foods, 3, 'sopapilla', 6))   */
 const updateFood1=(foods, id, price)=>{
 let newArr = foods.map(foods => {
   if(foods.id === id){
-    return {...foods, price: foods.price};
-  }
-return foods;
+    return foods.price = price; 
 
- });
+
+  }
+ })
+    return newArr
+
 }
-console.log(updateFood1(mexican, 1, 6))  
+
+console.log(updateFood1(mexican, 2, 6))  
+
 
 
 //MAP
