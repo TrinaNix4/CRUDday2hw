@@ -16,16 +16,15 @@ let american = [{id:1, name:'burgers', price:21},{id:2, name:'pizza rolls',price
 /// returns array of formatted strings[] (you choose what these look like)
 //array is populated with the results of calling a function on every element in the array
 
-/* const about = (foods)=>{
-let mapArray = mexican.map((foods) => {
-return 
+ const about = (foods)=>{
+let mapArray = foods.map((foods => {
+return [`{id: ${foods.id}, name: ${foods.name}, price: ${foods.price}}`]
 
-})
- return 
+}))
+console.log(mexican)
+console.log(about(mexican))
 
-
-
-} */
+} 
   
 
 
@@ -83,7 +82,7 @@ console.log(addFood2(foods, 3, 'sopapilla', 6))   */
 
 /// returns new array with the price updated with the id given
 
-  let foods = [{id:1, name:'carnitas', price:21},{id:2, name:'asada',price:22}]
+  /* let foods = [{id:1, name:'carnitas', price:21},{id:2, name:'asada',price:22}]
 
 const updateFood1=(foods, id, price)=>{
 
@@ -93,7 +92,7 @@ return foods
 
  })
 }
-console.log(mexican, 1, 6) 
+console.log(mexican, 1, 6)  */
 
 
 
@@ -110,7 +109,7 @@ console.log(mexican, 1, 6)
 
 /// returns new array with the food item updated with the id given
 
-const updateFood1=(foods, id, food)=>{
+/* const updateFood1=(foods, id, food)=>{
 
 let newArray = foods.map((foods)=> {
 return 
@@ -118,7 +117,7 @@ return foods
 })
 console.log(newArray)
  }
-console.log(updateFood1(mexican, 1, taco))
+console.log(updateFood1(mexican, 1, taco)) */
 
 
 // FILTER
