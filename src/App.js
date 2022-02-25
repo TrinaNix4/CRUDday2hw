@@ -6,7 +6,6 @@ import User from "./User";
 import NewUser from "./NewUser"
  
 
-
 function App() {                                //the set function will update the state
   const [loading, setLoading] = useState(false); //generic - someState, a way to set some State [state, setState] = useState(initialState)
   const [users, setUsers] = useState([]) //hooks cannot go in a function so put at top

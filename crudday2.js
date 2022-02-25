@@ -11,13 +11,11 @@ let american = [{id:1, name:'burgers', price:21},
 
 
 //MAP
-
 // foods:[{id:number,name:string, price:number},...]
-
 /// returns array of formatted strings[] (you choose what these look like)
 //array is populated with the results of calling a function on every element in the array
 
-
+//LECTURE
 const foodToString = (food) => { //write function and store it to a variable
   return `${food.nam} is ${food.price} nad ID is ${food.id}`
 }
@@ -38,9 +36,7 @@ console.log(typeof about) */
 
 // [...]
 // foods:[{id:number,name:string, price:number},...]  //passing a newobj
-
 // food: {id:number,name:string, price:number}
-
 /// returns new array with food added
 
 
@@ -56,7 +52,7 @@ return newMenu
 console.log('original menu: ' , foods)
 console.log('updated menu: ', addFood1(newFoodToAdd))   */
 
-
+//LECTURE
 const addFood1 = (foods, food) => {
   return [...foods, food]
 }
@@ -67,14 +63,11 @@ const addFood1 = (foods, food) => {
 // foods:[{id:number,name:string, price:number},...]  //passing it value, and formatting it into an obj to be added into the array 
 //make the obj within the function
 // id:number,
-
 // name:string, 
-
 // price:number
+/// returns new array with food ad
 
-/// returns new array with food add
-
-
+//MY WORK
 /* let foods = [{id:1, name:'carnitas', price:21},{id:2, name:'asada',price:22}]
 
 const addFood2 = (foods, id,name,price)=>{
@@ -87,29 +80,25 @@ console.log(addFood2(foods, 3, 'sopapilla', 6))   */
 //MAP
 
 // foods:[{id:number,name:string, price:number},...]
-
 // id:number,
-
 // price:number
-
 /// returns new array with the price updated with the id given
-
   //let foods = [{id:1, name:'carnitas', price:21},{id:2, name:'asada',price:22}]
 
+  //MY WORK
 /* const updateFood1=(foods, id, price)=>{
 let newArr = foods.map(foods => {
   if(foods.id === id){
      foods.price = price; 
-
-
   }
  })
     return newArr
 
 }
-
 console.log(updateFood1(mexican, 2, 6))   */
 
+
+//LECTURE
 const updateFoodPrice = (food, id, price) => {
   if(food.id === id){
     return {...food, price:price } //if IDs dont' match 
@@ -126,13 +115,11 @@ console.log(updateFoodPrice)({id: 0, name:'pizza', price: })
 //MAP
 
 // foods:[{id:number,name:string, price:number},...]
-
 // id:number,
-
 // food:{id:number,name:string, price:number}}
-
 /// returns new array with the food item updated with the id given
 
+//LECTURE AND MY WORK
 const updateFood2=(foods, id, food)=>{
 return foods.map(foodElement => {  //need to return map 
   if(foodElement.id === id){
@@ -148,16 +135,14 @@ console.log(updateFood2(mexican, 2, 'taco'))
 
 
 // FILTER
-
 // foods:[{id:number,name:string, price:number},...]
-
 // id:number,
-
 // removes the food with the given the id
-
 //if it returns true, its gonna keep the thing. if not true it will delete it
+
 //MY WORK
 //delete food with id: 1
+
 /*  const deleteFood1 = (foods,id)=>{
 let foodFilter = foods.filter((foods) => {
     return foods.id !== id 
@@ -166,8 +151,9 @@ return foodFilter
 }
 console.log(deleteFood1(mexican, 1))  */
 
-const idMatch = (food, id) =>{
 
+//LECTURE 
+const idMatch = (food, id) =>{
   return food.id === id
 }
 console.log('idMatch return' , idMatch(id:12, name:'CHANGED', price:123))
@@ -183,13 +169,12 @@ console.log('delete food: return' , deleteFood1(mexican, 12))
 //or i can pss my filter method a function that returns true or false; such as IDmatch which is a function
 //that returns true or false; one i'm storing to a variable or can just pass it an 
 //unnamed function that can't be reused (cause not stored to a variable)
-
 // foods:[{id:number,name:string, price:number},...]
-
 // price:number,
-
 // removes the food with price over price given
 
+
+//MY WORK
 /*  const deleteFood2 = (foods,price)=>{
 let foodFilter2 = foods.filter((foods) => {
 return foods.price > price
@@ -199,14 +184,14 @@ return foodFilter2
 }
 console.log(deleteFood2(mexican, 21)) } */
 
-
-//write a functiont hat returns T or F if food is overprice
+//LECTURE
+//write a functionthat returns T or F if food is overprice
 const isOverPriced = (food, price) => food.price <= price //written in one line and will return, no need to write return
 console('isOverPriced' , isOverPriced({price:100}, 200)) //can pass any item that has a price key and it will tell if overpriced
 
 const deleteFood2 = (foods, price) => {  //filter method needs to pass functiot hat returns true or false so need curly brackets to return that
   return foods.filter((food) => { //boolean returned and filter uses the boolean to decide whether to keep or not 
     return isOverPriced(food, price)
-    )}
+    })
 };
 
